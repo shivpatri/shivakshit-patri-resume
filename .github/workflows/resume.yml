@@ -18,12 +18,12 @@ jobs:
       - name: Compile LaTeX resume
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: main.tex # ⚠️ Change this to your Overleaf .tex filename
+          root_file: resume.tex # ⚠️ Change this to your Overleaf .tex filename
 
       - name: Prepare publish directory
         run: |
           mkdir publish
-          cp main.pdf publish/resume.pdf # ⚠️ Change main.pdf to match your compiled filename
+          cp resume.pdf publish/resume.pdf # ⚠️ Change main.pdf to match your compiled filename
 
       - name: Deploy to GitHub Pages branch
         uses: peaceiris/actions-gh-pages@v4
